@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6Z4BDLMQTM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6Z4BDLMQTM');
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/song/styles.css">
+</head>
+
+<!--
+    TODO:
+    - add youtube channel button ("[|>] Support!")
+    - about us page with credit to azlyrics and thesaurus.com
+-->
+
+<body>
+    <div id="navbar">
+        <a href="/" style="text-decoration: none; text-decoration-color: none;">
+            <h1>Smartify</h1>
+        </a>
+        <a href="/about" style="text-decoration: none; text-decoration-color: none;">About</a>
+    </div>
+    <div id="credit">
+        <h1 id="song-name"></h1>
+        <h2 id="artist"></h2>
+    </div>
+    <div id="title">
+        <h1>Before</h1>
+        <h1>After</h1>
+    </div>
+    <button hidden id="version" onclick="toggleVersion()">Before</button>
+    <div>
+        <div class="panel">
+            <p id="before">Not-smart lyrics</p>
+        </div>
+        <div class="panel">
+            <p id="after">Very smart lyrics</p>
+        </div>
+    </div>
+    <div hidden id="search-form">
+        <h1>Choose Another</h1>
+        <form action="/song">
+            <input required type="text" id="query" name="query" value="" placeholder="The Monster Eminem"><br><br>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div>
+        <button hidden id="button-sub" onclick="javascript:location.replace('https:\/\/youtube.com/@_rbt')">
+            ❤️ Support
+        </button>
+    </div>
+    <script src="index.js"></script>
+</body>
+<footer></footer>
+
+</html>

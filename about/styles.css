@@ -1,0 +1,45 @@
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 5vh;
+}
+
+
+body>div {
+    margin-top: 5vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    body {
+        font-size: 40px;
+        /* same as fixed button: */
+        margin-bottom: 2vw;
+    }
+
+    body>div {
+        width: 90vw;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+}

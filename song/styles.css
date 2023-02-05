@@ -1,0 +1,157 @@
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: 5vh;
+}
+
+body>div {
+    margin-top: 5vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title>h1 {
+    flex: 1;
+}
+
+.panel {
+    flex: 1;
+    padding-right: 2%;
+}
+
+.panel:last-of-type {
+    border-left: 1px solid black;
+    padding-left: 2%
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 2vh;
+    width: 25vw;
+    border: none;
+}
+
+input {
+    margin: 2vh 0vh 2vh 0vh;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+#version {
+    height: 0;
+    width: 0;
+    position: fixed;
+    left: 101vw
+}
+
+#credit {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#credit>h2,
+#artist {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #version {
+        position: fixed;
+        height: auto;
+        left: auto;
+        right: 5vw;
+        bottom: 2vw;
+        top: auto;
+        width: 25vw;
+    }
+
+    #title {
+        position: fixed;
+        left: 101vw
+    }
+
+    body {
+        font-size: 40px;
+        /* same as fixed button: */
+        margin-bottom: 2vw;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #credit>h2,
+    #artist {
+        font-size: 40px;
+    }
+
+    body>div {
+        width: 90%;
+    }
+
+    #credit {
+        width: 90%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .panel {
+        padding-right: 0;
+    }
+
+    .panel:nth-child(2) {
+        padding-left: 0;
+        border-left: 0;
+    }
+
+    #search-form {
+        margin-top: 10vh;
+    }
+
+    /* this concept of activity only applies for small screens */
+    .panel[active=true] {
+        display: unset;
+    }
+
+    .panel[active=false] {
+        display: none;
+    }
+
+    body>div:last-child {
+        color: black;
+    }
+
+    #search-form * {
+        width: 100%;
+    }
+
+    #button-sub {
+        width: 60vw;
+    }
+
+}
