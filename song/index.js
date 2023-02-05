@@ -1,4 +1,4 @@
-const ORIGIN = 'http://ec2-3-138-113-215.us-east-2.compute.amazonaws.com'
+const ORIGIN = 'https://rlazimi-dev.link'
 
 function smartify(string) {
     const cache = JSON.parse(localStorage.getItem('smartify-cache') || '{}')
