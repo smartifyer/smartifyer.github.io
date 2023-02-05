@@ -1,4 +1,4 @@
-const ORIGIN = 'https://rlazimi-dev.link'
+const ORIGIN = 'https://redblacktest.link'
 
 function smartify(string) {
     const cache = JSON.parse(localStorage.getItem('smartify-cache') || '{}')
